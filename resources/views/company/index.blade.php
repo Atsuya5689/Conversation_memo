@@ -17,15 +17,24 @@
     <body>
         <h1>会社名の一覧のページ</h1>
         
-        <div class="search">
+        {{--<div class="search">
             <form action="{{ url('/') }} method="GET>
                 <p><input type="text" name="keyword" value="{{ $keyword }}"></p>
                 <p><input type="number name"stock value="{{ $keyword }}"></p>
                 <p><input type="submit" value="検索"></p>
             </form>
             
-            @if(
-        </div>
+            @if($books->count())
+            
+            <table border="1">
+                <tr>
+                    <th>title</th>
+                    <th>author</th>
+                    <th>stock</th>
+                </tr>
+                @for
+            </table>
+        </div>--}}
         
         <div class='companies'>
             @foreach ($companies as $company)
