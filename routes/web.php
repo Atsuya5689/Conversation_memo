@@ -19,6 +19,7 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+Route::group(['middleware' => ['auth']], function(){
 
 //company関係
 Route::get('/', 'CompanyController@index');
@@ -40,6 +41,8 @@ Route::delete('/users/{user}', 'UserController@delete');
 //talk関係
 //Route::get('/talks', 'TalkController@index');
 Route::get('/talks/{user}', 'TalkController@index');
+Route::post('/talks/{user}', 'TalkController@store');
+});
 
 Auth::routes();
 

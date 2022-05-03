@@ -25,6 +25,7 @@ class Talk extends Model
         'body',
         'from_user_id',
         'to_user_id',
+        'created_at',
     ];
 
     /**

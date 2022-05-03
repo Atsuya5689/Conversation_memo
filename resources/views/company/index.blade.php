@@ -17,26 +17,45 @@
     <body>
         <h1>会社名の一覧のページ</h1>
         
-        {{--<div class="search">
-            <form action="{{ url('/') }} method="GET>
+        <div class="search">
+            <form action="/" method="GET">
                 <p><input type="text" name="keyword" value="{{ $keyword }}"></p>
-                <p><input type="number name"stock value="{{ $keyword }}"></p>
                 <p><input type="submit" value="検索"></p>
             </form>
             
-            @if($books->count())
+            @if($searchedCompany->count())
+                @foreach ($searchedCompany as $company)
+                <div class='company'>
+                    <!--<p class='title'>{{ $company->name}}</p>-->
+                    <a href="/companies/{{ $company->id }}">{{ $company->name }}</a>
+                </div>
             
-            <table border="1">
-                <tr>
-                    <th>title</th>
-                    <th>author</th>
-                    <th>stock</th>
-                </tr>
-                @for
-            </table>
-        </div>--}}
+                <form action="/companies/{{ $company->id }}" id="form_{{ $company->id }}" method="post" style="display:inline">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">delete</button> 
+                </form>
+            @endforeach
+            
+            @else
+            <p>見つかりませんでした。</p>
+            @endif
+        </div>
         
-        <div class='companies'>
+        {{--
+        <table border="1">
+                <tr>
+                    <th>company name</th>
+                </tr>
+                @foreach ($a as $company)
+                <tr>
+                    <td>{{ $company->name }}</td>
+                </tr>
+                @endforeach
+            </table>
+        --}}
+        
+        {{--<div class='companies'>
             @foreach ($companies as $company)
             <div class='company'>
                 <!--<p class='title'>{{ $company->name}}</p>-->
@@ -49,7 +68,7 @@
                 <button type="submit">delete</button> 
             </form>
             @endforeach
-        </div>
+        </div>--}}
     
         [<a href='/companies/create'>新規登録</a>]
     </body>

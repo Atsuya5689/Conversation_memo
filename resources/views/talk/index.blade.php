@@ -19,31 +19,70 @@
            {{ $user->name }}の会話一覧
         </h1>
         
-        <p>{{ $talks }}</p>
+
         
         <div class="body">
-            
-            @foreach($talks as $talk)
+            <!--{{ $searchedTalks }}-->
+            @foreach($searchedTalks as $talk)
             <div class="talk">
-                <h2>
+                <h7>
                     {{ $talk->body }}
-                </h2>
+                </h7>
             </div>
             
             @endforeach
         </div>
         
         <div class="text">
-            <form action="/talks/{{ $user }}" method="POST">
+            
+            <form class="search" action="/talks/{{ $user->id }}" method="GET">
+                <p><input type="text" name="keyword" value="{{ $keyword }}" placeholder="検索ワードを入力"></p>
+                {{--<select name="talk">
+                            @foreach($talks as $talk)
+                                <option value="{{ $talk->id}}">{{ $talk->created_at }}</option>
+                            @endforeach
+                </select>--}}
+                <select name="date">
+                    <option vaule="" selected="selected">選択してください</option>
+                    @foreach($searchedTalks as $talk)
+                    <option name="date" id="date" value="{{ $talk->id }}" placeholder="日付を指定できます">{{ $talk->created_at }}</option>
+                    @endforeach
+                </select>
+              
+                
+                <p><input type="submit" value="検索"></p>
+            </form>
+            
+            <form action="/talks/{{ $user->id }}" method="POST">
                 @csrf
+                
+                <div class="who">
+                    <h2>誰がしゃべっていますか？</h2>
+                        {{--<select name="talk[from_user_id]">
+                            @foreach($users as $user)
+                                <option value="{{ $user->id}}">{{ $user->name }}</option>
+                            @endforeach
+                        </select>--}}
+                        <p>相手の言葉<input type="radio" name="talk[from_user_id]" value="{{ $user->id }}" checked></p>
+                        <p>自分の言葉<input type="radio" name="talk[from_user_id]" value="{{ $myId->id }}" checked></p>          
+                        {{--<h2>聞き手</h2>
+                        <select name="talk[to_user_id]">
+                            @foreach($users as $user)
+                                <option value="{{ $user->id}}">{{ $user->name }}</option>
+                            @endforeach
+                        </select>--}}
+                </div>
+                
                 <div class="content">
                     <h2>テキストを入力</h2>
-                    <input type="text" name="talk[]" placeholder="会話を入力してください">
+                    <!--<input type="text" name="talk[body]" placeholder="会話を入力してください">-->
+                    <textarea name="talk[body]" placeholder="会話を入力してください"> </textarea>
                 </div>
-                <div class="who">
+                
+                <input type="submit" value="保存"/>
                     
-                </div>
             </form>
+            
         </div>
         
         

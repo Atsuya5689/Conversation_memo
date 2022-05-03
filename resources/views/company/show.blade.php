@@ -18,9 +18,49 @@
         <h1 class="name">
             {{ $company->name }}
         </h1>
-        
+     
         <div class="content">
             <div class="content_user">
+                
+            <form action="/companies/{{ $company->id }}" method="GET">
+                <p><input type="text" name="keyword" value="{{ $keyword }}"></p>
+                <p><input type="submit" value="検索"></p>
+            </form>
+            
+            @if($searchedUsers->count())
+                @foreach ($searchedUsers as $user)
+                <div class='user'>
+                    <h2 class='title'>
+                        <a href="/talks/{{ $user->id }}">{{ $user->name }}</a>
+                        <a href="/users/{{ $user->id }}">プロフィール</a>
+                    </h2>
+                </div>
+                
+                    <form action="/users/{{ $user->id }}" id="form_{{ $user->id }}" method="post" style="display:inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">delete</button>
+                    </form>
+                @endforeach 
+            
+            @else
+                <p>見つかりませんでした。</p>
+            @endif
+        
+            </div>
+            [<a href='/users/create'>新規登録</a>]
+        </div>
+        
+        <div class=footer>
+            <a href="/">戻る</a>
+        </div>
+    </body>
+</html>
+@endsection
+
+
+
+{{--<div class="content_user">
             @foreach ($users as $user)
             <div class='user'>
                 <h2 class='title'>
@@ -36,12 +76,4 @@
                 </form>
             @endforeach    
         
-            </div>
-        </div>
-        
-        <div class=footer>
-            <a href="/">戻る</a>
-        </div>
-    </body>
-</html>
-@endsection
+            </div>--}}

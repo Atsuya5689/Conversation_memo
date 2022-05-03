@@ -24,7 +24,7 @@ class UserController extends Controller
     }
     
     public function show(User $user, Company $company)
-    {
+    {   
         return view('employee/show')->with(['user' => $user])->with(['company' => $company]);
     }
     

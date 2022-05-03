@@ -36,7 +36,7 @@
                 <input type="text" name="user[company_id]" placeholder="カンパニーID(半角数字)"/>
                 <select name="user[company_id]">
                     @foreach($companies as $company)
-                        <option value="{{ $company->id }}">{{ $company->Name }}</option>
+                        <option value="{{ $company->id }}">{{ $company->name }}</option>
                     @endforeach    
                 </select>
             </div>

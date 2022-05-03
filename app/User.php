@@ -24,10 +24,10 @@ class User extends Authenticatable
     
     public function talks()
     {
-        return $this->hasMany('App\Talk');
+        return $this->hasMany('App\Talk', 'from_user_id', 'to_user_id');
     }
     
-    public function getByuser(int $limit_count = 5)
+    public function getByUser(int $limit_count = 5)
     {
         return $this->talks()->orderBy('updated_at', 'DESC')->paginate($limit_count);
     }
