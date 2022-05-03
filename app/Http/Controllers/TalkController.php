@@ -105,7 +105,7 @@ class TalkController extends Controller
                             // });
                             // dd($talksDate->get());
         }else{
-            $talksDate = $talks;
+            $talksDate = $talks->where('id', '>=', 0);
         }
         // dd($talksDate);
         $searchedTalks = $talksDate->get();
