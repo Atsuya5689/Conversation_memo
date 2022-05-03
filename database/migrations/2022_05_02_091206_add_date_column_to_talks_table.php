@@ -14,8 +14,7 @@ class AddDateColumnToTalksTable extends Migration
     public function up()
     {
         Schema::table('talks', function (Blueprint $table) {
-            //追加済み
-            // $table->date('date')->nullable();
+            $table->date('date')->nullable();
         });
     }
 
