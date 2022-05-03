@@ -44,7 +44,7 @@
                 @endforeach 
             
             @else
-                <p>見つかりませんでした。</p>
+                <p>メンバーを登録してください。</p>
             @endif
         
             </div>
