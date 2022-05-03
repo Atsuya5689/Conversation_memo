@@ -43,7 +43,7 @@
                             @endforeach
                 </select>--}}
                 <select name="date">
-                    <option vaule="" selected="selected">選択してください</option>
+                    <option vaule="" selected="selected"></option>
                     @foreach($searchedTalks as $talk)
                     <option name="date" id="date" value="{{ $talk->id }}" placeholder="日付を指定できます">{{ $talk->created_at }}</option>
                     @endforeach
