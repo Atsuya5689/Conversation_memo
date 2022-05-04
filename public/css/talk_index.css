@@ -113,7 +113,7 @@ footer{
     
     .messages {
         overflow-y: scroll;
-        margin: 0 50px;
+        margin: 0 8px;
         background-color: #fffaf0;
         height: 180px;
       
