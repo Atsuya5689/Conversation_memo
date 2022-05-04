@@ -27,6 +27,9 @@ html, body {
     height: 250px;
   
 }
+    .talk-right {
+        text-align:right;
+    }
 
 .search {
     height: 80px;

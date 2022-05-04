@@ -1,3 +1,4 @@
+
 html, body {
     background-color: #fffaf0;/*これは一番薄い色*/
     color: #8b4513;
@@ -63,3 +64,23 @@ footer{
         /*background-color: green;*/
         
     /*}*/
+    
+@media all and (max-width: 480px) { 
+    .title{
+        background-color: #faebd7;/*これは一番濃い色*/
+        height:80px;
+        margin:0px 50px;
+        padding:0px 30px;
+    }
+    
+    .search {
+        background-color: #faf0e6;/*これは中間の色*/
+        margin:0px 50px;
+        padding:10px 10px;
+    }
+    
+    .search-box {
+        background-color: #faebd7;/*これは一番濃い色*/
+        /*padding-left: 50%;*/
+    }
+}

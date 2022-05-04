@@ -35,9 +35,15 @@
                 <div id="scroll-inner">
                     <!--{{ $searchedTalks }}-->
                     @foreach($searchedTalks as $talk)
-                    <div class="talk">
-                            {{ $talk->body }}
-                    </div>
+                        @if($talk->from_user_id === $myId->id)
+                            <div class="talk-right">
+                                    {{ $talk->body }}
+                            </div>
+                        @else
+                            <div class="talk">
+                                    {{ $talk->body }}
+                            </div>
+                        @endif
                     @endforeach
                     {{--<div class='paginate'>
                         {{ $searchedTalks->links() }}
@@ -94,7 +100,7 @@
                     <div class="content">
                         <!--<h2>テキストを入力</h2>-->
                         <!--<input type="text" name="talk[body]" placeholder="会話を入力してください">-->
-                        <textarea class="write-box" name="talk[body]" placeholder="会話を入力してください"> </textarea>
+                        <input class="write-box" name="talk[body]" placeholder="会話を入力してください"> </input>
                         <input  type="submit" value="保存"/>
                     </div>
                     
