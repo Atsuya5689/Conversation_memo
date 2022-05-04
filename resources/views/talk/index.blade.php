@@ -58,7 +58,7 @@
                             <option value="{{ $talk->id}}">{{ $talk->created_at }}</option>
                         @endforeach
                 </select>--}}
-                <div class="date">
+                <div class="date" id="date">
                     <h5>日付/キーワード検索</h5>
                     <select name="date">
                         <option vaule="" selected="selected"></option>

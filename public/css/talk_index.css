@@ -35,9 +35,11 @@ html, body {
     .talk-right {
         color:#800000;
         text-align:right;
+        border-bottom: 1px solid #faebd7;
     }
     .talk {
         color:#2e8b57;
+        border-bottom: 1px solid #faebd7;
     }
 
 .search {
