@@ -11,7 +11,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{{asset('css/company_index.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/employee_show.css')}}">
 
     </head>
     <body>
@@ -20,11 +20,11 @@
             <a href="/companies/{{ $user->company_id }}">戻る</a>
         </div>
         
-        <h1 class="name">
+        <h1 class="title">
             {{ $user->name }}
         </h1>
         
-        <div class="content">
+        <div class="contents">
             <div class="content_user">
                 <h3>グループ名</h3>
                 <p>{{ $user->company_id}}</p>

@@ -1,0 +1,91 @@
+未完成
+html, body {
+    background-color: #fffaf0;/*これは一番薄い色*/
+    color: #8b4513;
+    
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+.app-name {
+    background-color: #8fbc8f;
+    padding: 10px 0;
+}
+
+.title{
+    background-color: #faebd7;/*これは一番濃い色*/
+    height:80px;
+    margin:0px 50px;
+    padding:0px 30px;
+}
+
+.search {
+    background-color: #faf0e6;/*これは中間の色*/
+    margin:0px 50px;
+    padding:10px 10px;
+}
+
+.search-box {
+    background-color: #faebd7;/*これは一番濃い色*/
+    padding-left: 50%;
+}
+
+.search-input {
+    /*padding-left:100px;*/
+    width: 80%;
+}
+
+.create {
+    background-color: #faebd7;/*これは一番濃い色*/
+    float:right;
+}
+
+.company {
+    background-color: #eee8aa;
+}
+    .company a {
+        color: green;
+    }
+    
+.delete-button {
+    text-align:right;
+}
+
+footer{
+    background-color: #8fbc8f;
+    width:100%;
+        border-top: 5px solid #8b4513;
+        text-align: center;
+        padding: 30px 0;
+        
+        position: absolute;
+        bottom: 0;
+}
+
+    /*.footer-title {*/
+        /*background-color: green;*/
+        
+    /*}*/
+    
+@media all and (max-width: 480px) { 
+    .title{
+        background-color: #faebd7;/*これは一番濃い色*/
+        height:25px;
+        margin:0px 5px;
+        padding:0px 0px;
+        font-size:20px;
+    }
+    
+    .search {
+        background-color: #faf0e6;/*これは中間の色*/
+        margin:0px 5px;
+        padding:10px 10px;
+    }
+    
+    .search-box {
+        background-color: #faebd7;/*これは一番濃い色*/
+        /*padding-left: 50%;*/
+    }
+}
