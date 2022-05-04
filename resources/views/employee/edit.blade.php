@@ -11,9 +11,16 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/company_index.css')}}">
+   
     </head>
     
     <body>
+        
+        <div class="back">
+            <a href="/users/{{ $user->id }}">戻る</a>
+        </div>
+        
         <h1>社員の編集のページ</h1>
         
         <!--登録のためのフォーム-->
@@ -33,9 +40,14 @@
                 <input type="text" name="user[password]" value="{{ $user->password }}"/>
             </div>
             <div class="company_id">
-                <h2>グループID</h2>
-                <input type="text" name="user[company_id]" value="{{ $user->company_id }}"/>
+                <h2>グループ名</h2>
+                <select name="user[company_id]">
+                    @foreach($companies as $company)
+                        <option value="{{ $company->id }}">{{ $company->name }}</option>
+                    @endforeach    
+                </select>
             </div>
+            
             <div class="gender">
                 <h2>性別</h2>
                 <input type="text" name="user[gender]" value="{{ $user->gender }}"/>
@@ -47,7 +59,10 @@
             <input type="submit" value="保存"/>
         </form>
         
-        <div class="back">[<a href="/users">back</a>]</div>
+        <!--<div class="back">[<a href="/users">back</a>]</div>-->
+        
+        
+        
     </body>
 </html>
 @endsection

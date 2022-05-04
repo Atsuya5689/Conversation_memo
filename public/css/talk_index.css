@@ -1,0 +1,87 @@
+html, body {
+    background-color: #fffaf0;/*これは一番薄い色*/
+    color: #8b4513;
+    
+    /*min-height: 100vh;*/
+    /*position: relative;*/
+    /*padding-bottom: 100px;*/
+    /*box-sizing: border-box;*/
+}
+
+.app-name {
+    background-color: #8fbc8f;
+    padding: 10px 0;
+}
+
+.title{
+    background-color: #faebd7;/*これは一番濃い色*/
+    height:50px;
+    margin:0px 50px;
+    padding:0px 30px;
+}
+
+.messages {
+      overflow-y: scroll;
+    margin: 0 50px;
+    background-color: #fffaf0;
+    height: 250px;
+  
+}
+
+.search {
+    height: 80px;
+    margin: 0 50px;
+    padding: 10px 0;
+    background-color: #faf0e6;
+}
+    .search-box {
+        float:right;
+        padding-top: 20px;
+    }
+    .date {
+        float:left;
+    }
+
+.text {
+    background-color: #faf0e6;
+    position: absolute;
+    bottom: 95px;
+    width: 100%;
+    /*margin: 0 50px;*/
+}
+    .who {
+        border-top: 2px #8b4513 solid;
+        /*background-color: yellow;*/
+        height: 72px;
+        padding: 0 50px;
+    }
+        .who h2 {
+            font-size: 20px;
+        }
+        .who p {
+            float:left;
+        }
+    
+    .content {
+        /*background-color: pink;*/
+        /*height: 400px;*/
+        padding: 0 50px;
+    }
+        .content h2 {
+            font-size: 20px;
+        }
+        .write-box {
+            width:80%;
+        }
+
+footer{
+    background-color: #8fbc8f;
+    width:100%;
+    /*height:50px;*/
+        border-top: 5px solid #8b4513;
+        text-align: center;
+        padding: 30px 0;
+        
+        position: absolute;
+        bottom: 0;
+}

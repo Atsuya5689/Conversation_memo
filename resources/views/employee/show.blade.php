@@ -11,10 +11,15 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-
+        <link rel="stylesheet" type="text/css" href="{{asset('css/company_index.css')}}">
 
     </head>
     <body>
+        
+        <div class=back>
+            <a href="/companies/{{ $user->company_id }}">戻る</a>
+        </div>
+        
         <h1 class="name">
             {{ $user->name }}
         </h1>
@@ -36,9 +41,7 @@
             </div>
         </div>
         
-        <div class=footer>
-            <a href="/companies/{{ $company->id }}">戻る</a>
-        </div>
+        
     </body>
 </html>
 @endsection

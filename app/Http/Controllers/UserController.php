@@ -13,8 +13,9 @@ class UserController extends Controller
         return view('talk/index')->with(['users' => $user])->with(['talks' => $talk->get()]);//何の情報化わかりにくいので、user.indexなどに変える
     }
     
-    public function create(Company $company){
-        return view('employee/create')->with(['companies' => $company->get()]);//このままだとほかのcreateと区別がつかないので、userディレクトリを作って、その中にbladeファイルと入れる。
+    public function create(Company $company, User $user){
+        // dd($user->get());
+        return view('employee/create')->with(['user' => $user, 'companies' => $company->get(), 'company2' => $company]);//このままだとほかのcreateと区別がつかないので、userディレクトリを作って、その中にbladeファイルと入れる。
     }
     
     public function store(Request $request, User $user){
@@ -28,8 +29,8 @@ class UserController extends Controller
         return view('employee/show')->with(['user' => $user])->with(['company' => $company]);
     }
     
-    public function edit(User $user){
-        return view('employee/edit')->with(['user' => $user]);
+    public function edit(User $user, Company $company){
+        return view('employee/edit')->with(['user' => $user, 'companies' => $company->get()]);
     }
     
     public function update(Request $request, User $user){

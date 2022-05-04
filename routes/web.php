@@ -24,14 +24,15 @@ Route::group(['middleware' => ['auth']], function(){
 //company関係
 Route::get('/', 'CompanyController@index');
 Route::get('/companies/create', 'CompanyController@create');
-Route::get('companies/{company}', 'CompanyController@show');
+Route::get('/companies/{company}', 'CompanyController@show');
+Route::get('/company/{user}', 'CompanyController@show');
 Route::post('/companies', 'CompanyController@store');
 Route::delete('/companies/{company}', 'CompanyController@delete');
 //Route::get('/companies/{company}', 'CompanyController@index');
 
 //user関係
 Route::get('/users', 'UserController@index');
-Route::get('/users/create', 'UserController@create');
+Route::get('/users/{company}/create', 'UserController@create');
 Route::post('/users', 'UserController@store');
 Route::get('/users/{user}', 'UserController@show');
 Route::get('/users/{user}/edit', 'UserController@edit');
@@ -46,4 +47,4 @@ Route::post('/talks/{user}', 'TalkController@store');
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

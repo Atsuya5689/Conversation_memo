@@ -1,0 +1,68 @@
+html, body {
+    background-color: #fffaf0;/*これは一番薄い色*/
+    color: #8b4513;
+    
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+.name{
+    background-color: #faebd7;/*これは一番濃い色*/
+    height:80px;
+    margin:0px 50px;
+    padding:0px 30px;
+}
+
+.content{
+    background-color: #faf0e6;/*これは中間の色*/
+    margin:0px 50px;
+    padding:0 10px;
+}
+
+.content-user {
+    /*background-color: yellow;*/
+    background-color: #faf0e6;/*これは中間の色*/
+    padding:10px 0;
+}
+
+.search-box {
+    /*margin-top:0px;*/
+    background-color: #faebd7;/*これは一番濃い色*/
+    padding-left: 50%;
+}
+
+.create {
+    background-color: #faebd7;/*これは一番濃い色*/
+    float:right;
+}
+
+.user {
+    /*background-color: pink;*/
+    background-color: #eee8aa;
+    
+}
+    /*.title {*/
+    /*    color:green;*/
+    /*}*/
+        .user a {
+            color: green;
+            /*font-size: 10px;*/
+        }
+
+.back {
+    background-color: gray;
+    /*float:left;*/
+}
+
+footer{
+    background-color: #8fbc8f;
+    width:100%;
+        border-top: 5px solid #8b4513;
+        text-align: center;
+        padding: 30px 0;
+        
+        position: absolute;
+        bottom: 0;
+}

@@ -19,13 +19,13 @@ class UsersTableseeder extends Seeder
         //    'gender' => '男',
         //    'age' => 20,
         //    ]);
-        DB::table('users')->insert([
-            'name' => '名前2',
-            'email' => 'メールアドレス2',
-            'password' => 'パスワード2',
-            'company_id' => 2,
-            'gender' => '男',
-            'age' => 21,
-            ]);
+        // DB::table('users')->insert([
+        //     'name' => '名前2',
+        //     'email' => 'メールアドレス2',
+        //     'password' => 'パスワード2',
+        //     'company_id' => 2,
+        //     'gender' => '男',
+        //     'age' => 21,
+        //     ]);
     }
 }

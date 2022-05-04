@@ -11,7 +11,7 @@ class Talk extends Model
         return $this->belongTo('App\User', 'from_user_id', 'to_user_id');
     }
     
-    function getPaginateByLimit(int $limit_count = 5)
+    function getPaginateByLimit(int $limit_count = 4)
     {
         return $this::with('user')->orderBy('updated_at', 'DESC')->paginate($limit_count);
     }

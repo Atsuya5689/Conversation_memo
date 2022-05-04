@@ -109,7 +109,8 @@ class TalkController extends Controller
         }
         // dd($talksDate);
         $searchedTalks = $talksDate->get();
-    //   dd($searchedTalks);S
+        // $searchedTalks = $talksDate->paginate(4);
+    //   dd($searchedTalks);
         return view('talk/index', compact('searchedTalks', 'keyword'))->with(['user' => $user, 'users' => $user->get(), 'talks' => $talks, 'myId' => $myId]);
         // ->with(['user' => $user, 'users' => $user->get(),
         //     'talks1' => $talk->where('from_user_id', $user->id)

@@ -12,16 +12,7 @@ class CompaniesTableSeeder extends Seeder
     public function run()
     {
         DB::table('companies')->insert([
-            'Name' => '会社A',
-        ]);
-        DB::table('companies')->insert([
-            'Name' => '会社B',
-        ]);
-        DB::table('companies')->insert([
-            'Name' => '会社C',
-        ]);
-        DB::table('companies')->insert([
-            'Name' => '会社D',
+            'name' => '例：会社A',
         ]);
     }
 }
