@@ -24,11 +24,9 @@
         
         <div class="contents">
             
-            <div class="title">
-                <h1>
-                    {{ $user->name }}との会話
-                </h1>
-            </div>
+            <h1 class="title">
+                {{ $user->name }}との会話
+            </h1>
             
     
             <div class="messages" >
@@ -101,7 +99,9 @@
                         <!--<h2>テキストを入力</h2>-->
                         <!--<input type="text" name="talk[body]" placeholder="会話を入力してください">-->
                         <input class="write-box" name="talk[body]" placeholder="会話を入力してください"> </input>
-                        <input  type="submit" value="保存"/>
+                        <div class="content-submit">
+                            <input  type="submit" value="保存"/>
+                        </div>
                     </div>
                     
                 </form>

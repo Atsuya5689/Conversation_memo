@@ -30,7 +30,7 @@
                 
                 <div class="search-box">
                     <form action="/companies/{{ $company->id }}" method="GET">
-                        <p><input type="text" name="keyword" value="{{ $keyword }}">
+                        <p><input class="search-input" type="text" name="keyword" value="{{ $keyword }}">
                         <input type="submit" value="検索"></p>
                     </form>
                 </div>
@@ -44,15 +44,18 @@
                         <div class='user'>
                             <!--<h2 class='title'>-->
                                 <a href="/talks/{{ $user->id }}">{{ $user->name }}</a>
+                                &nbsp;
                                 <a href="/users/{{ $user->id }}">プロフィール</a>
                             <!--</h2>-->
                         </div>
-                    
-                        <form action="/users/{{ $user->id }}" id="form_{{ $user->id }}" method="post" style="display:inline">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit">delete</button>
-                        </form>
+                        
+                        <div class="delete-button">
+                            <form action="/users/{{ $user->id }}" id="form_{{ $user->id }}" method="post" style="display:inline">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">delete</button>
+                            </form>
+                        </div>
                     @endforeach 
                 @else
                     <p>メンバーを登録してください。</p>

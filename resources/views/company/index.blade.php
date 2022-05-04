@@ -38,12 +38,15 @@
                         <!--<p class='title'>{{ $company->name}}</p>-->
                         <a href="/companies/{{ $company->id }}">{{ $company->name }}</a>
                     </div>
-                
-                    <form action="/companies/{{ $company->id }}" id="form_{{ $company->id }}" method="post" style="display:inline">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit">削除</button> 
-                    </form>
+                    
+                    <div class="delete-button">
+                        <form action="/companies/{{ $company->id }}" id="form_{{ $company->id }}" method="post" style="display:inline">
+                            @csrf
+                            @method('DELETE')
+                            <button class="delete" type="submit">削除</button> 
+                        </form>
+                    </div>
+                    
                 @endforeach
                 
                 @else

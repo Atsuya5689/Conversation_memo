@@ -24,13 +24,18 @@ html, body {
 .content-user {
     /*background-color: yellow;*/
     background-color: #faf0e6;/*これは中間の色*/
-    padding:10px 0;
+    padding:10px 0px;
 }
 
 .search-box {
     /*margin-top:0px;*/
     background-color: #faebd7;/*これは一番濃い色*/
     padding-left: 50%;
+}
+
+.search-input {
+    /*padding-left:100px;*/
+    width: 80%;
 }
 
 .create {
@@ -50,11 +55,18 @@ html, body {
             color: green;
             /*font-size: 10px;*/
         }
+        
+.delete-button{
+    text-align:right;
+}
 
 .back {
-    background-color: gray;
+    background-color: #8fbc8f;
     /*float:left;*/
 }
+    .back a{
+            /*color: #8b4513;*/
+    }
 
 footer{
     background-color: #8fbc8f;
@@ -65,4 +77,21 @@ footer{
         
         position: absolute;
         bottom: 0;
+}
+
+@media all and (max-width: 480px) { 
+    .name{
+        background-color: #faebd7;/*これは一番濃い色*/
+        height:25px;
+        margin:0px 5px;
+        padding:0px 30px;
+        font-size: 20px;
+    }
+    
+    .content{
+        background-color: #faf0e6;/*これは中間の色*/
+        margin:0px 5px;
+        padding:0 10px;
+    }
+    
 }
