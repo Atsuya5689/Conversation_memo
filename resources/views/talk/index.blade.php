@@ -78,15 +78,15 @@
                     @csrf
                 
                     <div class="who">
-                        <h2>誰がしゃべっていますか？</h2>
+                        <h2>slect speaker</h2>
                             {{--<select name="talk[from_user_id]">
                                 @foreach($users as $user)
                                     <option value="{{ $user->id}}">{{ $user->name }}</option>
                                 @endforeach
                             </select>--}}
-                            <p>相手の言葉<input type="radio" name="talk[from_user_id]" value="{{ $user->id }}" checked>
-                            &emsp;&emsp;<!--空白のコード！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
-                            自分の言葉<input type="radio" name="talk[from_user_id]" value="{{ $myId->id }}" checked></p>          
+                            <p>相手<input type="radio" name="talk[from_user_id]" value="{{ $user->id }}" checked>
+                            &nbsp;&nbsp;<!--空白のコード！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
+                            自分<input type="radio" name="talk[from_user_id]" value="{{ $myId->id }}" checked></p>          
                             {{--<h2>聞き手</h2>
                             <select name="talk[to_user_id]">
                                 @foreach($users as $user)

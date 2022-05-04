@@ -33,7 +33,11 @@ html, body {
   
 }
     .talk-right {
+        color:#800000;
         text-align:right;
+    }
+    .talk {
+        color:#2e8b57;
     }
 
 .search {
@@ -62,6 +66,7 @@ html, body {
         /*background-color: yellow;*/
         height: 72px;
         padding: 0 50px;
+        margin-bottom:2px;
     }
         .who h2 {
             font-size: 20px;
@@ -74,6 +79,7 @@ html, body {
         /*background-color: pink;*/
         /*height: 400px;*/
         padding: 0 50px;
+        margin:50;
     }
         .content h2 {
             font-size: 20px;
@@ -81,7 +87,9 @@ html, body {
         .write-box {
             width:80%;
         }
-
+        .content-submit {
+            float: right;
+        }
 footer{
     background-color: #8fbc8f;
     width:100%;
@@ -147,9 +155,10 @@ footer{
         .who {
             height:50px;
             padding:0 5px;
+            margin-bottom:0;
         }
             .who h2{
-                font-size: 10px;
+                font-size: 15px;
             }
             .who p {
                 font-size: 10px;
