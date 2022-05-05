@@ -25,7 +25,7 @@
         <div class="contents">
             
             <h1 class="title">
-                {{ $user->name }}との会話
+                {{ $user->name }}
             </h1>
             
     
