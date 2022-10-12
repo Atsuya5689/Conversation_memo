@@ -16,7 +16,7 @@
     </head>
     <body>
         <div class="contents">
-            <h2 class="app-name">Personal Conversation</h2>
+            <h2 class="app-name">会話の流れを忘れないように</br>備忘録を作りましょう。</h2>
             
             <h1 class="title">グループ一覧</h1>
         
