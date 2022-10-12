@@ -7113,6 +7113,11 @@ button.bg-dark:focus {
   background-color: transparent !important;
 }
 
+/*自分のカスタマイズ*/
+.bg-title {
+  background-color: #8fbc8f;
+}
+
 .border {
   border: 1px solid #dee2e6 !important;
 }
